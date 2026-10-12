@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QALMORA - A World of Books</title>
+    <!-- Google Fonts for Bengali -->
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <div class="logo-icon">📖</div>
+            <h1>QALMORA</h1>
+            <p>A World of Books</p>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="icon">📖</span> QALMORA
+        </div>
+        <div class="nav-right">
+            <select id="theme-selector" class="theme-select">
+                <option value="theme-dark">Dark</option>
+                <option value="theme-light">Light</option>
+                <option value="theme-midnight">Midnight Blue</option>
+                <option value="theme-rosegold">Rose Gold</option>
+                <option value="theme-emerald">Emerald</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h2>Your Next Favorite Book is Here</h2>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search books, authors...">
+            </div>
+        </section>
+
+        <!-- Book Categories -->
+        <section class="categories">
+            <h3>Categories</h3>
+            <div class="category-tags">
+                <button class="tag active">All</button>
+                <button class="tag">Novel</button>
+                <button class="tag">Fantasy</button>
+                <button class="tag">Romance</button>
+                <button class="tag">Mystery</button>
+            </div>
+        </section>
+
+        <!-- Featured Books Grid / Shelf -->
+        <section class="book-shelf">
+            <h3>Featured Books</h3>
+            <div class="books-grid" id="books-container">
+                
+                <!-- Sample Book Card 1 -->
+                <div class="book-card" onclick="openReader('The Midnight Library', 'Matt Haig')">
+                    <div class="book-cover cover-1">
+                        <h4>The Midnight Library</h4>
+                        <p>Matt Haig</p>
+                    </div>
+                    <div class="book-info">
+                        <h4>The Midnight Library</h4>
+                        <p class="author">Matt Haig</p>
+                        <span class="rating">★ 4.8</span>
+                    </div>
+                </div>
+
+                <!-- Sample Book Card 2 -->
+                <div class="book-card" onclick="openReader('Atomic Habits', 'James Clear')">
+                    <div class="book-cover cover-2">
+                        <h4>Atomic Habits</h4>
+                        <p>James Clear</p>
+                    </div>
+                    <div class="book-info">
+                        <h4>Atomic Habits</h4>
+                        <p class="author">James Clear</p>
+                        <span class="rating">★ 4.9</span>
+                    </div>
+                </div>
+
+                <!-- Sample Book Card 3 -->
+                <div class="book-card" onclick="openReader('তুমি আমার সেই', 'Rojin Heljo')">
+                    <div class="book-cover cover-3">
+                        <h4>তুমি আমার সেই</h4>
+                        <p>Rojin Heljo</p>
+                    </div>
+                    <div class="book-info">
+                        <h4>তুমি আমার সেই</h4>
+                        <p class="author">Rojin Heljo</p>
+                        <span class="rating">★ 4.7</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Reader Modal / Book Reader View -->
+    <div id="reader-modal" class="reader-modal hidden">
+        <div class="reader-header">
+            <button onclick="closeReader()" class="back-btn">← Back</button>
+            <h3 id="reader-title">Book Title</h3>
+            <button id="font-toggle" class="icon-btn">A±</button>
+        </div>
+        <div class="reader-body" id="reader-body">
+            <h2>অধ্যায় ১: একটি নতুন শুরু</h2>
+            <p>জীবন সবসময় আমাদের ইচ্ছেমতো চলে না। কিন্তু প্রতিবার থমকে দাঁড়ানোর পর আবার নতুন করে শুরু করার নামই জীবন। এই বইয়ের প্রতিটি পাতা আপনাকে এক নতুন জগতের সন্ধান দেবে...</p>
+            <p>বই পড়ার অনুভূতি কখনোই পুরনো হয় না। ডিজিটাল মাধ্যমেও যদি সুন্দর একটি লেআউটে পড়া যায়, তবে গল্পগুলো জীবন্ত হয়ে ওঠে।</p>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item active">
+            <span>🏠</span>
+            <small>Home</small>
+        </button>
+        <button class="nav-item">
+            <span>📚</span>
+            <small>Library</small>
+        </button>
+        <button class="nav-item">
+            <span>🧭</span>
+            <small>Discover</small>
+        </button>
+        <button class="nav-item">
+            <span>👤</span>
+            <small>Profile</small>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+  </html>
